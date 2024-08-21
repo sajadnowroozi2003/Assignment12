@@ -9,6 +9,26 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  List<String> WidgetNameList = [
+    'font_awesome_flutter',
+    'fluttertoast',
+    'rflutter_alert',
+    'english_words',
+    'text_to_speech',
+    'share_plus',
+    'linkify',
+    'photo_view',
+    'flutter_spinkit',
+    'shimmer',
+    'chewie',
+    'audioplayers',
+    'flutter_screenutil',
+    'cached_network_image',
+    'flex_color_picker',
+    'pluto_grid',
+    'dropdown_button',
+  ];
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -72,24 +92,30 @@ class _HomeScreenState extends State<HomeScreen> {
           backgroundColor: Colors.amber.shade800,
         ),
         body: GridView.builder(
-            itemCount: 10,
+            itemCount: WidgetNameList.length,
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2, mainAxisExtent: 250, mainAxisSpacing: 10),
             itemBuilder: (context, index) {
               return Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.amberAccent.shade700,
-                      borderRadius: BorderRadius.circular(20)),
-                  child: Center(
-                    child: Text(
-                      textAlign: TextAlign.center,
-                      'Widget Name',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 25),
+                child: GestureDetector(
+                  onTap: () {},
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: Colors.amberAccent.shade700,
+                        borderRadius: BorderRadius.circular(20)),
+                    child: Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          textAlign: TextAlign.center,
+                          '${WidgetNameList[index]}',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 25),
+                        ),
+                      ),
                     ),
                   ),
                 ),
