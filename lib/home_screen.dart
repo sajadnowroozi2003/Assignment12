@@ -61,6 +61,9 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
         appBar: AppBar(
+          iconTheme: IconThemeData(
+            color: Colors.white, // تغییر رنگ آیکون‌های AppBar به سفید
+          ),
           title: Text(
             'Top 10 Lybrary in Flutter',
             style: TextStyle(
