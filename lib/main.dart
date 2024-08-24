@@ -1,4 +1,5 @@
 import 'package:assignment12/home_screen.dart';
+import 'package:assignment12/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -20,7 +21,10 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/' : (context) => HomeScreen(),
+        '/' : (context) => SplashScreen(),
+        '/home' : (context) => HomeScreen(),
+
+
 
       },
 
