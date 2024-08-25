@@ -11,9 +11,11 @@ import 'package:assignment12/widget_screens/rflutter_alert.dart';
 import 'package:assignment12/widget_screens/share_plus.dart';
 import 'package:assignment12/widget_screens/shimmer.dart';
 import 'package:assignment12/widget_screens/text_to_speech.dart';
+import 'package:assignment12/widget_screens/toast.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
 import 'package:url_launcher/url_launcher.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -28,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
     {'name': 'font_awesome', 'rout': FontAwesome()},
     {
       'name': 'fluttertoast',
-      'rout': FontAwesome(),
+      'rout': Toaast(),
     },
     {
       'name': 'rflutter_alert',
@@ -103,7 +105,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 color: Colors.white,
                 fontFamily: 'Forte'),
           ),
-          backgroundColor: Colors.black87,
+          backgroundColor: Colors.purple,
         ),
         body: Container(
           decoration: BoxDecoration(

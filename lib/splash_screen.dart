@@ -43,7 +43,7 @@ class _SplashScreenState extends State<SplashScreen>
                       fontFamily: 'Forte',
                         fontSize: 35,
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepOrange),
+                        color: Colors.black87),
                   ),
                   Text('v 0.1.1'),
                 ],

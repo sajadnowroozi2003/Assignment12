@@ -1,6 +1,8 @@
 import 'package:assignment12/home_screen.dart';
 import 'package:assignment12/splash_screen.dart';
+import 'package:assignment12/widget_screens/toast.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,6 +25,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/' : (context) => SplashScreen(),
         '/home' : (context) => HomeScreen(),
+        '/fluttertoast' : (context) => Toaast(),
 
 
 
