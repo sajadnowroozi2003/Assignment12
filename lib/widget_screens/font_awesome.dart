@@ -44,10 +44,10 @@ class _FontAwesomeState extends State<FontAwesome> {
                 end: Alignment.topCenter,
                 begin: Alignment.bottomCenter,
                 colors: [
-                  Colors.amber.shade900,
-                  Colors.white,
-                  Colors.purple,
-                ])),
+              Colors.amber.shade900,
+              Colors.black,
+              Colors.purple,
+            ])),
         child: ListView(
           children: [
             Divider(),
@@ -64,6 +64,25 @@ class _FontAwesomeState extends State<FontAwesome> {
                 'This icon pack includes only the free icons offered by Font Awesome out-of-the-box. If you have purchased the pro icons and want to enable support for them, please see the instructions below.',
                 style: TextStyle(color: Colors.white),
               ),
+            ),
+            space20,
+            Text(
+              '# Properties:',
+              style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white),
+            ),
+            space10,
+            Text(
+              '''
+              1: icon
+              2: size
+              3: color
+              4: semanticLabel
+              5: textDirection
+              ''',
+              style: TextStyle(color: Colors.white),
             ),
             space20,
             Text(
@@ -91,7 +110,7 @@ class _FontAwesomeState extends State<FontAwesome> {
             ),
             Padding(
               padding:
-              const EdgeInsets.symmetric(vertical: 20.0, horizontal: 40),
+                  const EdgeInsets.symmetric(vertical: 20.0, horizontal: 40),
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
@@ -113,60 +132,60 @@ class _FontAwesomeState extends State<FontAwesome> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                Text(
-                '1: Add dependencies:',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
-              Text(
-                'Go to pubspec.yaml\'s file and add dependencies under cupertino_icons like this:',
-                style: TextStyle(fontSize: 16, color: Colors.white),
-              ),
-              space10,
-              Image.asset('asstes/images/fontAwesome_dependencies.png'),
-              space20,
-              Text(
-                '2: Import package:',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
-              space10,
-              Image.asset('asstes/images/fontAwesome_importPackage.png'),
-              space20,
-              Text(
-                '3: Implement:',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
-              space10,
-              Image.asset('asstes/images/fontAwesome_implement.png'),
-              space10,
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  FaIcon(
-                    FontAwesomeIcons.twitter,
-                    size: 50.0,
+                  Text(
+                    '1: Add dependencies:',
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold,color: Colors.white),
                   ),
-                  SizedBox(width: 20.0),
-                  FaIcon(
-                    FontAwesomeIcons.github,
-                    size: 50.0,
+                  Text(
+                    'Go to "pub.dev" website and search name of package copy the last version and then Go to the pubspec.yaml\'s file and add dependencies under cupertino_icons like this:',
+                    style: TextStyle(fontSize: 16, color: Colors.white),
+                  ),
+                  space10,
+                  Image.asset('asstes/images/fontAwesome_dependencies.png'),
+                  space20,
+                  Text(
+                    '2: Import package:',
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold,color: Colors.white),
+                  ),
+                  space10,
+                  Image.asset('asstes/images/fontAwesome_importPackage.png'),
+                  space20,
+                  Text(
+                    '3: Implement:',
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold,color: Colors.white),
+                  ),
+                  space10,
+                  Image.asset('asstes/images/fontAwesome_implement.png'),
+                  space10,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      FaIcon(
+                        FontAwesomeIcons.twitter,
+                        size: 50.0,
+                      ),
+                      SizedBox(width: 20.0),
+                      FaIcon(
+                        FontAwesomeIcons.github,
+                        size: 50.0,
+                      ),
+                    ],
+                  ),
+                  space20,
+                  ElevatedButton(
+                    onPressed: () => _launchURL(
+                        'https://pub.dev/packages/font_awesome_flutter'),
+                    child: Text('learn more'),
+                  ),
+                  SizedBox(
+                    height: 50,
                   ),
                 ],
               ),
-              space20,
-              ElevatedButton(
-                  onPressed: () => _launchURL('https://pub.dev/packages/font_awesome_flutter'),
-                  child: Text('learn more'),
-            ),
-            SizedBox(
-              height: 50,
             ),
           ],
         ),
       ),
-      ],
-    ),)
-    ,
     );
   }
-
 }
