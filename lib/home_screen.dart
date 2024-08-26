@@ -27,42 +27,55 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List<Map> Packages = [
-    {'name': 'font_awesome', 'rout': FontAwesome()},
+    {
+      'name': 'font_awesome',
+      'rout': FontAwesome(),
+      'image': 'asstes/images/fontAwesome_logo.jpeg',
+    },
     {
       'name': 'fluttertoast',
       'rout': Toaast(),
+      'image': 'asstes/images/FlutterToast_logo.png',
     },
     {
       'name': 'rflutter_alert',
       'rout': RflutterAlert(),
+      'image': 'asstes/images/rFlutterAlert.png',
     },
     {
       'name': 'english_words',
       'rout': EnglishWords(),
+      'image': 'asstes/images/EnglisWords_logo.png',
     },
     {
       'name': 'text_to_speech',
       'rout': TextToSpeech(),
+      'image': 'asstes/images/TextToSpeach_logo.jpg',
     },
     {
       'name': 'share_plus',
       'rout': SharePlus(),
+      'image': 'asstes/images/SharePlus_logo.png',
     },
     {
       'name': 'linkify',
       'rout': Linkify(),
+      'image': 'asstes/images/linkify_logo.jpg',
     },
     {
       'name': 'flutter_spinkit',
       'rout': FlutterSpinkit(),
+      'image': 'asstes/images/FlutterSpinKit_logo.jpg',
     },
     {
       'name': 'shimmer',
       'rout': Shimmer(),
+      'image': 'asstes/images/shimmer_logo.jpg',
     },
     {
       'name': 'chewie',
       'rout': Chewie(),
+      'image': 'asstes/images/chewie_logo.jpg',
     },
   ];
 
@@ -114,7 +127,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   begin: Alignment.bottomCenter,
                   colors: [
                 Colors.amber.shade900,
-                Colors.white,
+                Colors.black,
                 Colors.purple,
               ])),
           child: GridView.builder(
@@ -151,8 +164,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(20),
                                     child: Image.asset(
-                                      'asstes/images/flutter logo.png',
-                                      fit: BoxFit.contain,
+                                      width: 200,
+                                      Packages[index]['image'].toString(),
+                                      fit: BoxFit.cover,
                                     ),
                                   )),
                               Divider(
