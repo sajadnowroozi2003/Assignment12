@@ -40,8 +40,8 @@ class _SplashScreenState extends State<SplashScreen>
                   Text(
                     'Top Ten Flutter Package',
                     style: TextStyle(
-                      fontFamily: 'Forte',
-                        fontSize: 35,
+                        fontFamily: 'Forte',
+                        fontSize: 25,
                         fontWeight: FontWeight.bold,
                         color: Colors.black87),
                   ),

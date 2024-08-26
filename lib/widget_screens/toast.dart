@@ -13,6 +13,9 @@ class _ToaastState extends State<Toaast> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        iconTheme: IconThemeData(
+          color: Colors.white
+        ),
         backgroundColor: Colors.purple,
         title: Text(
           'Flutter Toast',
@@ -40,7 +43,7 @@ class _ToaastState extends State<Toaast> {
             ElevatedButton(
               onPressed: () {
                 Fluttertoast.showToast(
-                  msg: 'You have an error 🤣😂',
+                  msg: 'You have an error 😝🤪',
                   toastLength: Toast.LENGTH_LONG,
                   backgroundColor: Colors.purple,
                   fontSize: 20,
