@@ -32,22 +32,16 @@ class _SharePlusState extends State<SharePlus> {
 
   Future<void> _shareImage() async {
     try {
-
-      final ByteData data = await rootBundle.load('assets/images/sajad-success-photo.png');
-
+      final ByteData data = await rootBundle
+          .load('asstes/images/SharePluse_show_method_sharing.png');
       final buffer = data.buffer.asUint8List();
       final directory = await getTemporaryDirectory();
-
-      final filePath = '${directory.path}/images/sajad-success-photo.png';
+      final filePath = '${directory.path}/SharePluse_show_method_sharing.png';
       final file = File(filePath);
+
       await file.writeAsBytes(buffer);
-
-
-      // اشتراک‌گذاری فایل
       final result =
-          await Share.shareXFiles([XFile(filePath)], text: 'Great picture I\'m Sajjad Nowrozi!');
-
-      // بررسی وضعیت اشتراک‌گذاری
+          await Share.shareXFiles([XFile(filePath)], text: 'Great picture!');
       if (result.status == ShareResultStatus.success) {
         print('Thank you for sharing the picture!');
       } else {
@@ -115,7 +109,7 @@ class _SharePlusState extends State<SharePlus> {
               '''
               1: Cross-Platform Support
               2: Text and Links
-              3: Files:
+              3: Files
               4: Multiple Files
               5: Custom MIME Types
               6: Subject Line
@@ -161,7 +155,7 @@ class _SharePlusState extends State<SharePlus> {
                     style: TextStyle(fontSize: 16, color: Colors.white),
                   ),
                   space10,
-                  Image.asset('asstes/images/sharePlus_dependence.png'),
+                  Image.asset('asstes/images/SharePlus_dependence.png'),
                   space20,
                   Text(
                     '2: Import package:',
@@ -171,7 +165,7 @@ class _SharePlusState extends State<SharePlus> {
                         color: Colors.white),
                   ),
                   space10,
-                  Image.asset('asstes/images/rFlutterAlert_import.png'),
+                  Image.asset('asstes/images/SharePlus_import.png'),
                   space20,
                   Text(
                     '3: Implement:',
@@ -180,13 +174,9 @@ class _SharePlusState extends State<SharePlus> {
                         fontWeight: FontWeight.bold,
                         color: Colors.white),
                   ),
-                  Text(
-                    'Create method foreach Kind of Share plus like this',
-                    style: TextStyle(fontSize: 16, color: Colors.white),
-                  ),
                   space20,
                   Text(
-                    '# Kind of alerts button:',
+                    '# Kind of Share plus:',
                     style: TextStyle(
                         fontSize: 25,
                         fontWeight: FontWeight.bold,
@@ -197,7 +187,7 @@ class _SharePlusState extends State<SharePlus> {
                     children: [
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Image.asset('asstes/images/_showBasicAlert.png'),
+                        child: Image.asset('asstes/images/SharePluse_show_basic_sharing.png'),
                       ),
                       space10,
                       ElevatedButton(
@@ -210,7 +200,7 @@ class _SharePlusState extends State<SharePlus> {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child:
-                            Image.asset('asstes/images/_showSuccessAlert.png'),
+                            Image.asset('asstes/images/SharePluse_show_with_subject.png'),
                       ),
                       space10,
                       ElevatedButton(
@@ -223,7 +213,8 @@ class _SharePlusState extends State<SharePlus> {
                       space50,
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Image.asset('asstes/images/_showErrorAlert.png'),
+                        child: Image.asset(
+                            'asstes/images/SharePluse_show_link_sharing.png'),
                       ),
                       space10,
                       ElevatedButton(
@@ -235,64 +226,26 @@ class _SharePlusState extends State<SharePlus> {
                       space50,
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child:
-                            Image.asset('asstes/images/_showWarningAlert.png'),
+                        child: Image.asset(
+                            'asstes/images/SharePluse_show_method_sharing.png'),
                       ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Image.asset(
+                            'asstes/images/SharePluse_show_single_file.png'),
+                      ),
+                      space10,
                       space10,
                       ElevatedButton(
                         onPressed: _shareImage,
                         child: Text("Show Single File"),
                       ),
-                      space50,
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Image.asset('asstes/images/_showInfoAlert.png'),
-                      ),
-                      space10,
-                      ElevatedButton(
-                        onPressed: () {},
-                        child: Text("Show Info Alert"),
-                      ),
-                      space50,
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child:
-                            Image.asset('asstes/images/_showCustomAlert.png'),
-                      ),
-                      space10,
-                      ElevatedButton(
-                        onPressed: () {},
-                        child: Text("Show Custom Alert"),
-                      ),
-                      space50,
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child:
-                            Image.asset('asstes/images/_showStyledAlert.png'),
-                      ),
-                      space10,
-                      ElevatedButton(
-                        onPressed: () {},
-                        child: Text("Show Styled Alert"),
-                      ),
-                      space50,
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Image.asset(
-                            'asstes/images/_showAlertWithCustomContent.png'),
-                      ),
-                      space10,
-                      ElevatedButton(
-                        onPressed: () {},
-                        child: Text("Show AlertWithCustomContent Alert"),
-                      ),
                     ],
                   ),
                   space50,
-                  space20,
                   ElevatedButton(
                     onPressed: () =>
-                        _launchURL('https://pub.dev/packages/rflutter_alertl'),
+                        _launchURL('https://pub.dev/packages/share_plus'),
                     child: Text('learn more'),
                   ),
                   SizedBox(
@@ -300,15 +253,6 @@ class _SharePlusState extends State<SharePlus> {
                   ),
                 ],
               ),
-            ),
-            space20,
-            ElevatedButton(
-              onPressed: () =>
-                  _launchURL('https://pub.dev/packages/english_words'),
-              child: Text('learn more'),
-            ),
-            SizedBox(
-              height: 50,
             ),
           ],
         ),
