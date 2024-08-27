@@ -12,7 +12,6 @@ import 'package:assignment12/widget_screens/share_plus.dart';
 import 'package:assignment12/widget_screens/shimmer.dart';
 import 'package:assignment12/widget_screens/text_to_speech.dart';
 import 'package:assignment12/widget_screens/toast.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -49,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
     },
     {
       'name': 'text_to_speech',
-      'rout': TextToSpeech(),
+      'rout': TextToSpeechScreen(),
       'image': 'asstes/images/TextToSpeach_logo.jpg',
     },
     {

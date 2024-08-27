@@ -1,15 +1,23 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
-class TextToSpeech extends StatefulWidget {
-  const TextToSpeech({super.key});
-
-  @override
-  State<TextToSpeech> createState() => _TextToSpeechState();
+void main() {
+  runApp(const TextToSpeechScreen());
 }
 
-class _TextToSpeechState extends State<TextToSpeech> {
+class TextToSpeechScreen extends StatefulWidget {
+  const TextToSpeechScreen({super.key});
+
+  @override
+  State<TextToSpeechScreen> createState() => _TextToSpeechScreenState();
+}
+
+class _TextToSpeechScreenState extends State<TextToSpeechScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      home: Scaffold(
+        body: Text('body text'),
+      ),
+    );
   }
 }
