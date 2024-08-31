@@ -70,6 +70,18 @@ class _FlutterSpinkitState extends State<FlutterSpinkit>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        iconTheme: IconThemeData(color: Colors.white),
+        backgroundColor: Colors.purple,
+        title: Text(
+          'Spinkit',
+          style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+              fontFamily: 'Forte'),
+        ),
+      ),
       body: Container(
         height: double.infinity,
         width: double.infinity,
