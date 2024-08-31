@@ -505,11 +505,24 @@ class _RflutterAlertState extends State<RflutterAlert> {
                     ],
                   ),
                   space50,
-                  space20,
-                  ElevatedButton(
-                    onPressed: () =>
-                        _launchURL('https://pub.dev/packages/rflutter_alertl'),
-                    child: Text('learn more'),
+                  Divider(),
+                  Text(
+                    'for more information click here :',
+                    style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                  ),
+                  Center(
+                    child: Padding(
+                      padding: const EdgeInsets.all(28.0),
+                      child: ElevatedButton(
+                        onPressed: () {
+                          _launchURL('https://pub.dev/packages/rflutter_alertl');
+                        },
+                        child: Text(
+                          'Flutter Alert on pub.dev',
+                          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                    ),
                   ),
                   SizedBox(
                     height: 50,

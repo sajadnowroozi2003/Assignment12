@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class MenuItems {
-  static const String share = 'اشتراک گذاری';
-  static const String about = 'درباره ما';
-  static const String exit = 'خروج';
+  static const String share = 'share app';
+  static const String about = 'about me';
+  static const String exit = 'exit';
 
   static const List<String> choic = <String>[share, about, exit];
 
